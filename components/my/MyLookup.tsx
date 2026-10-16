@@ -11,11 +11,16 @@ import ApplicationDetail from "./ApplicationDetail";
 
 const ID_RE = /^KANFA-\d{4}-\d{4}$/;
 
+/** 주소의 ?id= 값으로 접수번호를 미리 채운다. */
 export default function MyLookup() {
-  const params = useSearchParams();
+  const id = (useSearchParams().get("id") ?? "").toUpperCase();
+  return <MyLookupView key={id} initialId={id} />;
+}
+
+export function MyLookupView({ initialId = "" }: { initialId?: string }) {
   const apps = useApplications();
   const hydrated = useHydrated();
-  const [appId, setAppId] = useState(() => (params.get("id") ?? "").toUpperCase());
+  const [appId, setAppId] = useState(initialId);
   const [last4, setLast4] = useState("");
   const [errors, setErrors] = useState<{ appId?: string; last4?: string; notFound?: string }>({});
   const [foundId, setFoundId] = useState<string | null>(null);

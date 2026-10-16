@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
   // 정적 호스팅(Netlify 등)에서 /about → /about/index.html 로 열리도록 한다.
   trailingSlash: !preview,
   images: { unoptimized: true },
+  // CSS 파일을 따로 받느라 첫 화면이 늦어지지 않도록 HTML에 넣는다(모바일 성능 점수 대응).
+  experimental: { inlineCss: true },
   ...(preview ? { assetPrefix: "/assets" } : {}),
   ...(basePath ? { basePath } : {}),
 };

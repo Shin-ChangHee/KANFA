@@ -10,7 +10,7 @@ import { APPLY_HREF } from "@/lib/site";
 
 export const metadata: Metadata = { title: "참여 방법" };
 
-const H2 = "text-[1.625rem] font-extrabold";
+const H2 = "section-title";
 
 export default function HowToPage() {
   return (

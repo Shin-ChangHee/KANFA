@@ -49,12 +49,13 @@ export default function TrackHero() {
       <desc id="track-desc">{description}</desc>
 
       {/* 트랙 바탕과 잔디 */}
-      <path d={stadium(OUTER)} fill="#1E4FA0" />
+      {/* 트랙 블루 띠 위에 놓이므로 트랙 면은 한 단계 진하게 */}
+      <path d={stadium(OUTER)} fill="#163D7D" />
       <path d={stadium(INNER)} fill="#E4F4EC" />
 
       {/* 레인 경계선 */}
       {[1, 2, 3, 4, 5].map((i) => (
-        <path key={i} d={stadium(INNER + LANE * i)} fill="none" stroke="#F7F9FC" strokeOpacity={0.7} strokeWidth={1.5} />
+        <path key={i} d={stadium(INNER + LANE * i)} fill="none" stroke="#F7F9FC" strokeOpacity={0.55} strokeWidth={1.5} />
       ))}
       <path d={stadium(OUTER)} fill="none" stroke="#F7F9FC" strokeWidth={2} />
       <path d={stadium(INNER)} fill="none" stroke="#F7F9FC" strokeWidth={2} />
@@ -87,21 +88,30 @@ export default function TrackHero() {
             <text x={p.x} y={p.y + 5.5} textAnchor="middle" fontFamily="'Barlow Condensed', sans-serif" fontWeight={700} fontSize={16} fill="#14213D">
               {s.order}
             </text>
-            <text x={p.lx} y={p.ly} textAnchor={p.anchor} fontSize={15} fontWeight={700} fill="#14213D">
+            <text x={p.lx} y={p.ly} textAnchor={p.anchor} fontSize={15} fontWeight={700} fill="#14213D" className="hidden sm:inline">
               {s.element}
             </text>
           </g>
         );
       })}
 
-      <text x={CX} y={CY + 5} textAnchor="middle" fontSize={15} fontWeight={700} fill="#1F7A50">
+      <text x={CX} y={CY + 5} textAnchor="middle" fontSize={15} fontWeight={700} fill="#1F7A50" className="hidden sm:inline">
         6개 구간 한 바퀴
       </text>
 
       <TrackRunner d={lap(runnerR)} start={{ x: START_X, y: CY + runnerR }} />
     </svg>
-      <figcaption className="mt-3 text-center text-slate">
-        4등급이라면 <strong className="text-ink">4번 레인</strong>에서 출발해요. 안쪽부터 1~6레인이 1~6등급이에요.
+      {/* 좁은 화면에서는 트랙 안 글자가 너무 작아 구간 이름을 아래에 따로 보여준다 */}
+      <ol aria-hidden="true" className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm font-semibold sm:hidden">
+        {stations.map((s) => (
+          <li key={s.order} className="flex items-center gap-2">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber font-num text-ink">{s.order}</span>
+            {s.element}
+          </li>
+        ))}
+      </ol>
+      <figcaption className="mt-4 text-center text-on-track">
+        4등급이라면 <strong className="text-white">4번 레인</strong>에서 출발해요. 안쪽부터 1~6레인이 1~6등급이에요.
       </figcaption>
     </figure>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ApplyWizard from "@/components/apply/ApplyWizard";
+import PageIntro from "@/components/PageIntro";
 import { events, getEvent } from "@/lib/data";
 import { formatDate } from "@/lib/format";
 
@@ -23,16 +24,8 @@ export default async function ApplyPage({ params }: Props) {
 
   return (
     <>
-      <div className="border-b border-mist bg-white">
-        <div className="container-page py-8">
-          <p className="font-semibold text-track">참가 신청</p>
-          <h1 className="mt-1 text-[1.75rem] font-extrabold md:text-[2.25rem]">{event.name}</h1>
-          <p className="mt-1 text-slate">
-            {formatDate(event.date)} · {event.venue}
-          </p>
-        </div>
-      </div>
-      <div className="container-page max-w-4xl py-8">
+      <PageIntro eyebrow="참가 신청" title={event.name} lead={`${formatDate(event.date)} · ${event.venue}`} />
+      <div className="container-page max-w-4xl py-10">
         <ApplyWizard event={event} />
       </div>
     </>

@@ -138,12 +138,9 @@ export default function ApplyWizard({ event }: { event: KanfaEvent }) {
     }
   };
 
-  if (!hydrated) {
-    return <p className="py-10 text-slate">신청서를 준비하고 있어요.</p>;
-  }
-
   const blocked = applyBlockedReason(event, apps);
-  if (blocked && !submitting) {
+  // 정적 HTML에서는 신청 내역을 모르므로, 저장소를 읽은 뒤에만 마감 여부로 막는다.
+  if (hydrated && blocked && !submitting) {
     return (
       <div className="rounded-xl border-2 border-mist bg-white p-6">
         <p className="text-lg font-bold">{blocked}</p>

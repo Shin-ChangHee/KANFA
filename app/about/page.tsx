@@ -17,7 +17,7 @@ export default function AboutPage() {
 
       <div className="container-page space-y-20 py-14">
         <section aria-labelledby="what-title" className="measure">
-          <h2 id="what-title" className="text-[1.625rem] font-extrabold">
+          <h2 id="what-title" className="section-title">
             KANFA란?
           </h2>
           <p className="mt-4">
@@ -31,7 +31,7 @@ export default function AboutPage() {
 
         <section aria-labelledby="name-title" className="grid gap-8 md:grid-cols-2">
           <div>
-            <h2 id="name-title" className="text-[1.625rem] font-extrabold">
+            <h2 id="name-title" className="section-title">
               이름의 뜻
             </h2>
             <p className="measure mt-4">
@@ -69,7 +69,7 @@ export default function AboutPage() {
 
         <section aria-labelledby="cycle-title" className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <h2 id="cycle-title" className="text-[1.625rem] font-extrabold">
+            <h2 id="cycle-title" className="section-title">
               측정에서 재도전까지 이어지는 순환
             </h2>
             <p className="measure mt-4 text-slate">한 번 나가고 끝나는 대회가 아니에요. 측정하고, 겨루고, 운동하고, 다시 측정하는 흐름이 계속 이어져요.</p>
@@ -88,7 +88,7 @@ export default function AboutPage() {
         </section>
 
         <section aria-labelledby="principles-title">
-          <h2 id="principles-title" className="text-[1.625rem] font-extrabold">
+          <h2 id="principles-title" className="section-title">
             세 가지 원칙
           </h2>
           <ul className="mt-6 grid gap-6 md:grid-cols-3">
@@ -102,7 +102,7 @@ export default function AboutPage() {
         </section>
 
         <section aria-labelledby="history-title" className="measure">
-          <h2 id="history-title" className="text-[1.625rem] font-extrabold">
+          <h2 id="history-title" className="section-title">
             체력왕 선발대회에서 이어진 이야기
           </h2>
           <p className="mt-4">
@@ -115,7 +115,7 @@ export default function AboutPage() {
         </section>
 
         <section aria-labelledby="relation-title">
-          <h2 id="relation-title" className="text-[1.625rem] font-extrabold">
+          <h2 id="relation-title" className="section-title">
             국민체력100과의 관계
           </h2>
           <dl className="mt-6 divide-y divide-mist rounded-xl border border-mist bg-white">

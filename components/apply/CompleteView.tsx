@@ -19,11 +19,12 @@ export default function CompleteView() {
   const app = apps.find((a) => a.id === id);
   const event = app ? getEvent(app.eventId) : undefined;
 
-  if (!hydrated) return <p className="py-10 text-slate">신청 내역을 불러오고 있어요.</p>;
+  // 불러오는 동안에도 결과 상자만큼 자리를 잡아 화면이 밀리지 않게 한다.
+  if (!hydrated) return <p className="min-h-[13rem] rounded-xl border-2 border-mist bg-white p-6 text-slate">신청 내역을 불러오고 있어요.</p>;
 
   if (!app || !event) {
     return (
-      <div className="rounded-xl border-2 border-mist bg-white p-6">
+      <div className="min-h-[13rem] rounded-xl border-2 border-mist bg-white p-6">
         <p className="text-lg font-bold">신청 내역을 찾을 수 없어요.</p>
         <p className="mt-1 text-slate">접수번호가 있다면 신청 조회에서 확인해 주세요. 이 시안은 신청한 브라우저에서만 내역을 볼 수 있어요.</p>
         <Link href="/my" className={buttonClass("primary", "mt-4")}>

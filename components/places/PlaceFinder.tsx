@@ -21,11 +21,16 @@ const KIND_INFO: Record<Place["kind"], { label: string; badge: string; body: str
 
 const selectClass = "mt-1 block min-h-11 w-full rounded-lg border-2 border-mist bg-white px-3 font-semibold focus:border-track";
 
+/** 주소의 ?kind= 값으로 장소 유형을 미리 고른다. */
 export default function PlaceFinder({ places }: { places: Place[] }) {
-  const params = useSearchParams();
-  const initialKind = params.get("kind");
+  const k = useSearchParams().get("kind");
+  const initialKind: Kind = k === "center" || k === "partner" ? k : "";
+  return <PlaceFinderView key={initialKind} places={places} initialKind={initialKind} />;
+}
+
+export function PlaceFinderView({ places, initialKind = "" }: { places: Place[]; initialKind?: Kind }) {
   const [region, setRegion] = useState("");
-  const [kind, setKind] = useState<Kind>(initialKind === "center" || initialKind === "partner" ? initialKind : "");
+  const [kind, setKind] = useState<Kind>(initialKind);
   const ids = { region: useId(), kind: useId() };
   const regions = [...new Set(places.map((p) => p.region))];
   const list = places.filter((p) => (!region || p.region === region) && (!kind || p.kind === kind));

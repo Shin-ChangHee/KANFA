@@ -33,7 +33,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-mist bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-mist bg-white">
       <div className="container-page flex min-h-16 items-center justify-between gap-4">
         <Wordmark />
 

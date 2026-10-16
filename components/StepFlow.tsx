@@ -4,18 +4,21 @@ import { STEPS } from "@/lib/content";
 export default function StepFlow({ variant = "compact" }: { variant?: "compact" | "detailed" }) {
   if (variant === "compact") {
     return (
-      <ol className="grid gap-4 md:grid-cols-5 md:gap-3">
+      <ol className="relative grid gap-6 md:grid-cols-5 md:gap-4">
+        {/* 다섯 단계를 잇는 레인 */}
+        <span aria-hidden="true" className="absolute top-6 right-[10%] left-[10%] hidden h-1 rounded-full bg-[repeating-linear-gradient(to_right,var(--color-track)_0_14px,transparent_14px_22px)] md:block" />
         {STEPS.map((s, i) => (
-          <li key={s.title} className="relative flex gap-4 md:flex-col md:gap-3">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-track font-num text-2xl font-bold text-white">
+          <li key={s.title} className="relative flex gap-4 md:flex-col md:items-center md:text-center">
+            <span
+              className={`relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-num text-2xl font-bold ring-4 ring-white ${
+                i === STEPS.length - 1 ? "bg-field-ink text-white" : "bg-track text-white"
+              }`}
+            >
               {i + 1}
             </span>
-            {i < STEPS.length - 1 && (
-              <span aria-hidden="true" className="absolute top-5 left-14 hidden h-0.5 w-[calc(100%-3.5rem)] bg-mist md:block" />
-            )}
             <div>
-              <h3 className="text-lg font-bold">{s.title}</h3>
-              <p className="text-slate">{s.summary}</p>
+              <h3 className="text-lg font-extrabold">{s.title}</h3>
+              <p className="mt-1 text-slate">{s.summary}</p>
             </div>
           </li>
         ))}

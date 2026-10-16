@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ApplyAction, LiveStatusBadge, SeatsLeft } from "@/components/live/EventLive";
+import PageIntro from "@/components/PageIntro";
 import { events, getEvent } from "@/lib/data";
 import { daysUntilApplyEnd } from "@/lib/event";
 import { formatDate, formatDateTime, formatWon } from "@/lib/format";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: event?.name ?? "대회 상세" };
 }
 
-const H2 = "text-[1.5rem] font-extrabold";
+const H2 = "section-title";
 
 export default async function EventDetailPage({ params }: Props) {
   const event = getEvent((await params).id);
@@ -31,28 +32,27 @@ export default async function EventDetailPage({ params }: Props) {
 
   return (
     <>
-      <div className="border-b border-mist bg-white">
-        <div className="container-page py-10 md:py-14">
-          <Link href="/events" className="inline-flex min-h-11 items-center font-semibold text-track underline underline-offset-4">
+      <PageIntro
+        title={event.name}
+        lead={`${formatDate(event.date)} · ${event.venue}`}
+        eyebrow={
+          <Link href="/events" className="inline-flex min-h-11 items-center text-white underline underline-offset-4">
             대회 일정으로 돌아가기
           </Link>
-          <div className="mt-3">
-            <LiveStatusBadge event={event} />
-          </div>
-          <h1 className="mt-3 text-[2rem] font-extrabold md:text-[2.5rem]">{event.name}</h1>
-          <p className="mt-2 text-lg">
-            {formatDate(event.date)} · {event.venue}
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
+        }
+      >
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <LiveStatusBadge event={event} />
+          <div className="[&_a]:bg-white [&_a]:text-track [&_a:hover]:bg-lane [&_p]:text-white">
             <ApplyAction event={event} label="참가 신청하기" />
-            {finished && (
-              <Link href={`/results/${event.id}`} className="inline-flex min-h-11 items-center font-semibold text-track underline underline-offset-4">
-                기록·순위 보기
-              </Link>
-            )}
           </div>
+          {finished && (
+            <Link href={`/results/${event.id}`} className="inline-flex min-h-11 items-center font-semibold text-white underline underline-offset-4">
+              기록·순위 보기
+            </Link>
+          )}
         </div>
-      </div>
+      </PageIntro>
 
       <div className="container-page grid gap-12 py-12 lg:grid-cols-[1.4fr_1fr]">
         <div className="min-w-0 space-y-12">
@@ -138,7 +138,7 @@ export default async function EventDetailPage({ params }: Props) {
                   <ol className="mt-2 divide-y divide-mist rounded-xl border border-mist bg-white">
                     {g.rows.map((h) => (
                       <li key={h.time} className="flex items-baseline gap-4 px-4 py-3">
-                        <span className="font-num text-xl font-bold text-track">{h.time}</span>
+                        <span className="w-14 shrink-0 font-num text-xl font-bold whitespace-nowrap text-track">{h.time}</span>
                         <span>{h.label}</span>
                       </li>
                     ))}

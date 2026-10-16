@@ -17,18 +17,21 @@ export default function CoursePreview({ courses }: { courses: Course[] }) {
         <p className="text-slate">
           {course.ageRange} · {course.durationMin} · 구간 사이 이동 {course.transferDistance}
         </p>
-        <ol className="mt-4 divide-y divide-mist border-y border-mist">
-          {course.stations.map((s) => (
-            <li key={s.order} className="flex items-start gap-4 py-4">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber font-num text-xl font-bold text-ink">{s.order}</span>
-              <div className="grid flex-1 gap-x-6 sm:grid-cols-[9rem_1fr]">
-                <span className="font-bold">{s.element}</span>
-                <span className="text-slate">
-                  {s.sourceTest} · {s.raceRule}
+        <ol className="mt-6 grid gap-px overflow-hidden rounded-2xl bg-mist sm:grid-cols-2 lg:grid-cols-3">
+          {course.stations.map((s) => {
+            const finish = s.order === course.stations.length;
+            return (
+              <li key={s.order} className="flex flex-col gap-3 bg-white p-6">
+                <span className="flex items-center gap-3">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber font-num text-2xl font-bold text-ink">{s.order}</span>
+                  <span className="text-sm font-semibold text-slate">{finish ? "결승" : `${s.order}구간`}</span>
                 </span>
-              </div>
-            </li>
-          ))}
+                <span className="text-xl font-extrabold">{s.element}</span>
+                <span className="text-slate">{s.sourceTest}</span>
+                <span className="mt-auto border-t border-mist pt-3 font-semibold">{s.raceRule}</span>
+              </li>
+            );
+          })}
         </ol>
         <Link
           href={type === "senior" ? "/course?tab=senior" : "/course"}

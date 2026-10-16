@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 빌드 전에 scripts/build-font-css.mjs가 만드는 파일
+/app/fonts.generated.css

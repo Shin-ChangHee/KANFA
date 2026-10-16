@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+import "./fonts.generated.css";
 import "@fontsource/barlow-condensed/latin-600.css";
 import "@fontsource/barlow-condensed/latin-700.css";
 import "./globals.css";
