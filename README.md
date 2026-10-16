@@ -15,6 +15,13 @@ npm run lint
 
 Node.js 20 이상이 필요해요.
 
+## 배포 (GitHub Pages)
+
+- 주소: https://shin-changhee.github.io/KANFA/
+- `claude/tender-mendel-azwsl6` 브랜치에 푸시하면 `.github/workflows/deploy.yml`이 자동으로 빌드·배포해요.
+- 저장소 Settings → Pages → Source는 **GitHub Actions**로 둬야 해요.
+- Pages는 사이트를 `/KANFA/` 아래에 열어서 `KANFA_BASE_PATH=/KANFA`로 빌드해요. 로컬에서 같은 결과를 보려면 `KANFA_BASE_PATH=/KANFA npm run build`.
+
 ## 진행 현황
 
 | Phase | 내용 | 상태 |

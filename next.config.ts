@@ -5,6 +5,9 @@ import type { NextConfig } from "next";
 // "_"로 시작하는 최상위 경로(/_next)를 쓸 수 없어 정적 파일을 /assets/_next 아래로 옮긴다.
 const preview = process.env.KANFA_PREVIEW === "1";
 
+// GitHub Pages는 사이트를 /KANFA/ 아래에 연다: KANFA_BASE_PATH=/KANFA npm run build
+const basePath = process.env.KANFA_BASE_PATH || undefined;
+
 const nextConfig: NextConfig = {
   // 정적 내보내기: `npm run build` 결과가 out/ 폴더에 생성된다.
   output: "export",
@@ -12,6 +15,7 @@ const nextConfig: NextConfig = {
   trailingSlash: !preview,
   images: { unoptimized: true },
   ...(preview ? { assetPrefix: "/assets" } : {}),
+  ...(basePath ? { basePath } : {}),
 };
 
 export default nextConfig;
