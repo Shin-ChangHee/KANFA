@@ -60,6 +60,8 @@ export interface Participant {
   gradeMeasuredAt?: string;
   onsiteMeasure: boolean;
   course: CourseType;
+  /** 경기 후 연결되는 배번 (종료된 대회) */
+  bib?: string;
 }
 
 export interface Application {

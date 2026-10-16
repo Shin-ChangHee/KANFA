@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import Placeholder from "@/components/Placeholder";
+import { Suspense } from "react";
+import PageIntro from "@/components/PageIntro";
+import PlaceFinder from "@/components/places/PlaceFinder";
+import { places } from "@/lib/data";
 
 export const metadata: Metadata = { title: "훈련 장소 찾기" };
 
-export default function Page() {
+export default function PlacesPage() {
   return (
-    <Placeholder
-      title="훈련 장소 찾기"
-      lead="가까운 체력인증센터와 KANFA 훈련 파트너를 찾아보세요."
-      plan={[
-        "체력인증센터 8곳 · 훈련 파트너 4곳 목록",
-        "지역 필터 · 지도 자리표시",
-      ]}
-    />
+    <>
+      <PageIntro
+        title="훈련 장소 찾기"
+        lead="체력인증센터에서 무료로 측정하고 체력증진교실에 참여하거나, KANFA 훈련 파트너에서 코스 동작을 연습해 보세요."
+      />
+      <div className="container-page py-10">
+        <Suspense fallback={<p className="text-slate">장소 목록을 준비하고 있어요.</p>}>
+          <PlaceFinder places={places} />
+        </Suspense>
+        <p className="mt-8 text-sm text-slate">장소 이름과 주소는 모두 시안용 예시예요.</p>
+      </div>
+    </>
   );
 }

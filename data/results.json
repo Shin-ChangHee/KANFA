@@ -25,15 +25,15 @@
     "course": "adult",
     "gender": "F",
     "ageGroup": "60대",
-    "grade": 2,
-    "totalSec": 967,
+    "grade": 1,
+    "totalSec": 916,
     "splits": [
-      229,
-      139,
-      189,
-      166,
-      166,
-      78
+      217,
+      132,
+      179,
+      157,
+      157,
+      74
     ],
     "improvementSec": 124
   },
@@ -44,15 +44,15 @@
     "course": "adult",
     "gender": "M",
     "ageGroup": "50대",
-    "grade": 3,
-    "totalSec": 1013,
+    "grade": 2,
+    "totalSec": 961,
     "splits": [
-      251,
-      153,
-      197,
-      149,
-      186,
-      77
+      238,
+      145,
+      187,
+      142,
+      176,
+      73
     ]
   },
   {
@@ -62,15 +62,15 @@
     "course": "adult",
     "gender": "F",
     "ageGroup": "30대",
-    "grade": 4,
-    "totalSec": 1049,
+    "grade": 2,
+    "totalSec": 947,
     "splits": [
-      245,
-      151,
-      201,
-      175,
-      188,
-      89
+      222,
+      136,
+      181,
+      158,
+      170,
+      80
     ],
     "improvementSec": 78
   },
@@ -81,15 +81,15 @@
     "course": "adult",
     "gender": "M",
     "ageGroup": "40대",
-    "grade": 5,
-    "totalSec": 1054,
+    "grade": 3,
+    "totalSec": 950,
     "splits": [
-      262,
+      236,
+      138,
+      180,
       153,
-      200,
-      170,
-      177,
-      92
+      160,
+      83
     ],
     "improvementSec": 89
   },
@@ -100,35 +100,35 @@
     "course": "adult",
     "gender": "F",
     "ageGroup": "40대",
-    "grade": 6,
-    "totalSec": 1156,
+    "grade": 3,
+    "totalSec": 1009,
     "splits": [
-      266,
-      155,
-      249,
-      179,
-      216,
-      91
+      232,
+      135,
+      217,
+      156,
+      189,
+      80
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A007",
-    "maskedName": "조*훈",
+    "maskedName": "김*수",
     "course": "adult",
     "gender": "M",
     "ageGroup": "30대",
-    "grade": 1,
-    "totalSec": 882,
+    "grade": 4,
+    "totalSec": 1094,
     "splits": [
-      218,
-      122,
+      257,
+      144,
+      275,
+      151,
       187,
-      128,
-      159,
-      68
+      80
     ],
-    "improvementSec": 111
+    "improvementSec": 109
   },
   {
     "eventId": "pilot",
@@ -136,111 +136,111 @@
     "maskedName": "윤*진",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "30대",
-    "grade": 2,
-    "totalSec": 937,
+    "ageGroup": "50대",
+    "grade": 4,
+    "totalSec": 1025,
     "splits": [
-      232,
-      140,
-      188,
-      143,
-      159,
-      75
+      245,
+      147,
+      217,
+      164,
+      175,
+      77
     ],
-    "improvementSec": 74
+    "improvementSec": 61
   },
   {
     "eventId": "pilot",
     "bib": "A009",
-    "maskedName": "장*현",
+    "maskedName": "장*석",
     "course": "adult",
     "gender": "M",
-    "ageGroup": "30대",
-    "grade": 3,
-    "totalSec": 1070,
+    "ageGroup": "40대",
+    "grade": 5,
+    "totalSec": 1113,
     "splits": [
-      255,
-      137,
-      227,
-      164,
-      201,
-      86
+      277,
+      156,
+      204,
+      190,
+      193,
+      93
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A010",
-    "maskedName": "임*희",
+    "maskedName": "임*진",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "50대",
-    "grade": 4,
-    "totalSec": 1036,
+    "ageGroup": "40대",
+    "grade": 5,
+    "totalSec": 1129,
     "splits": [
-      233,
-      147,
+      276,
+      146,
+      226,
+      181,
       211,
-      174,
-      187,
-      84
+      89
     ],
-    "improvementSec": 47
+    "improvementSec": 15
   },
   {
     "eventId": "pilot",
     "bib": "A011",
-    "maskedName": "한*훈",
+    "maskedName": "한*준",
     "course": "adult",
     "gender": "M",
     "ageGroup": "30대",
-    "grade": 5,
-    "totalSec": 1142,
+    "grade": 6,
+    "totalSec": 1147,
     "splits": [
-      275,
-      159,
-      226,
-      172,
-      218,
-      92
+      300,
+      158,
+      225,
+      178,
+      191,
+      95
     ],
-    "improvementSec": 47
+    "improvementSec": 104
   },
   {
     "eventId": "pilot",
     "bib": "A012",
-    "maskedName": "오*진",
+    "maskedName": "오*정",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "40대",
+    "ageGroup": "30대",
     "grade": 6,
-    "totalSec": 1264,
+    "totalSec": 1239,
     "splits": [
-      304,
-      180,
-      232,
-      213,
-      235,
+      311,
+      171,
+      248,
+      178,
+      231,
       100
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A013",
-    "maskedName": "서*준",
+    "maskedName": "서*훈",
     "course": "adult",
     "gender": "M",
-    "ageGroup": "60대",
+    "ageGroup": "30대",
     "grade": 1,
-    "totalSec": 907,
+    "totalSec": 946,
     "splits": [
-      203,
-      118,
-      190,
-      156,
-      162,
-      78
+      229,
+      123,
+      177,
+      159,
+      183,
+      75
     ],
-    "improvementSec": 43
+    "improvementSec": 59
   },
   {
     "eventId": "pilot",
@@ -249,241 +249,241 @@
     "course": "adult",
     "gender": "F",
     "ageGroup": "30대",
-    "grade": 2,
-    "totalSec": 982,
+    "grade": 1,
+    "totalSec": 883,
     "splits": [
-      231,
-      125,
-      205,
-      156,
-      188,
-      77
+      222,
+      121,
+      160,
+      147,
+      158,
+      75
     ],
-    "improvementSec": 58
+    "improvementSec": 67
   },
   {
     "eventId": "pilot",
     "bib": "A015",
-    "maskedName": "권*민",
+    "maskedName": "권*석",
     "course": "adult",
     "gender": "M",
-    "ageGroup": "20대",
-    "grade": 3,
-    "totalSec": 1014,
+    "ageGroup": "30대",
+    "grade": 2,
+    "totalSec": 899,
     "splits": [
-      228,
-      142,
-      199,
-      166,
-      193,
-      86
+      224,
+      117,
+      179,
+      140,
+      164,
+      75
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A016",
-    "maskedName": "황*진",
+    "maskedName": "황*은",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "20대",
-    "grade": 4,
-    "totalSec": 1022,
+    "ageGroup": "30대",
+    "grade": 2,
+    "totalSec": 884,
     "splits": [
-      256,
-      136,
-      189,
+      204,
+      132,
+      172,
+      134,
       164,
-      199,
       78
     ],
-    "improvementSec": 49
+    "improvementSec": 60
   },
   {
     "eventId": "pilot",
     "bib": "A017",
-    "maskedName": "안*석",
+    "maskedName": "안*훈",
     "course": "adult",
     "gender": "M",
     "ageGroup": "30대",
-    "grade": 5,
-    "totalSec": 1108,
+    "grade": 3,
+    "totalSec": 974,
     "splits": [
-      250,
-      151,
-      221,
-      178,
-      212,
-      96
+      238,
+      129,
+      191,
+      156,
+      177,
+      83
     ],
-    "improvementSec": 91
+    "improvementSec": 89
   },
   {
     "eventId": "pilot",
     "bib": "A018",
-    "maskedName": "송*아",
+    "maskedName": "송*숙",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "20대",
-    "grade": 6,
-    "totalSec": 1140,
+    "ageGroup": "50대",
+    "grade": 3,
+    "totalSec": 958,
     "splits": [
-      275,
-      159,
-      221,
-      197,
-      192,
-      96
+      214,
+      137,
+      194,
+      151,
+      189,
+      73
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A019",
-    "maskedName": "류*현",
+    "maskedName": "류*석",
     "course": "adult",
     "gender": "M",
     "ageGroup": "60대",
-    "grade": 1,
-    "totalSec": 902,
+    "grade": 4,
+    "totalSec": 1122,
     "splits": [
-      214,
-      119,
-      181,
-      150,
-      167,
-      71
+      240,
+      161,
+      220,
+      187,
+      218,
+      96
     ],
-    "improvementSec": 46
+    "improvementSec": 77
   },
   {
     "eventId": "pilot",
     "bib": "A020",
-    "maskedName": "홍*정",
+    "maskedName": "홍*연",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "50대",
-    "grade": 2,
-    "totalSec": 1031,
+    "ageGroup": "30대",
+    "grade": 4,
+    "totalSec": 1145,
     "splits": [
-      242,
-      148,
-      212,
-      164,
-      184,
-      81
+      266,
+      157,
+      236,
+      189,
+      206,
+      91
     ],
-    "improvementSec": 33
+    "improvementSec": 71
   },
   {
     "eventId": "pilot",
     "bib": "A021",
-    "maskedName": "김*수",
+    "maskedName": "김*우",
     "course": "adult",
     "gender": "M",
-    "ageGroup": "30대",
-    "grade": 3,
-    "totalSec": 997,
+    "ageGroup": "20대",
+    "grade": 5,
+    "totalSec": 1080,
     "splits": [
-      231,
-      129,
-      207,
-      172,
-      172,
-      86
+      254,
+      147,
+      202,
+      181,
+      212,
+      84
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A022",
-    "maskedName": "이*진",
+    "maskedName": "이*숙",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "40대",
-    "grade": 4,
-    "totalSec": 1148,
+    "ageGroup": "20대",
+    "grade": 5,
+    "totalSec": 1175,
     "splits": [
-      291,
-      156,
-      236,
-      189,
-      182,
-      94
+      289,
+      172,
+      226,
+      191,
+      215,
+      82
     ],
-    "improvementSec": 110
+    "improvementSec": 63
   },
   {
     "eventId": "pilot",
     "bib": "A023",
-    "maskedName": "박*민",
+    "maskedName": "박*훈",
     "course": "adult",
     "gender": "M",
-    "ageGroup": "20대",
-    "grade": 5,
-    "totalSec": 1119,
+    "ageGroup": "50대",
+    "grade": 6,
+    "totalSec": 1121,
     "splits": [
-      264,
-      156,
+      266,
+      155,
       224,
-      185,
-      195,
-      95
+      180,
+      209,
+      87
     ],
-    "improvementSec": 122
+    "improvementSec": 48
   },
   {
     "eventId": "pilot",
     "bib": "A024",
-    "maskedName": "최*정",
+    "maskedName": "최*아",
     "course": "adult",
     "gender": "F",
-    "ageGroup": "50대",
+    "ageGroup": "60대",
     "grade": 6,
-    "totalSec": 1209,
+    "totalSec": 1219,
     "splits": [
-      268,
-      169,
-      234,
-      208,
-      222,
-      108
+      318,
+      153,
+      237,
+      184,
+      230,
+      97
     ]
   },
   {
     "eventId": "pilot",
     "bib": "A025",
-    "maskedName": "정*민",
+    "maskedName": "정*우",
     "course": "adult",
     "gender": "M",
-    "ageGroup": "50대",
+    "ageGroup": "40대",
     "grade": 1,
-    "totalSec": 957,
+    "totalSec": 953,
     "splits": [
-      237,
-      144,
-      194,
-      142,
-      157,
-      83
+      239,
+      136,
+      202,
+      152,
+      156,
+      68
     ],
-    "improvementSec": 35
+    "improvementSec": 45
   },
   {
     "eventId": "pilot",
     "bib": "A026",
-    "maskedName": "강*연",
+    "maskedName": "강*아",
     "course": "adult",
     "gender": "F",
     "ageGroup": "20대",
-    "grade": 2,
-    "totalSec": 975,
+    "grade": 1,
+    "totalSec": 868,
     "splits": [
-      225,
-      141,
+      220,
+      116,
       179,
-      152,
-      192,
-      86
+      127,
+      151,
+      75
     ],
-    "improvementSec": 23
+    "improvementSec": 92
   },
   {
     "eventId": "pilot",
@@ -492,166 +492,166 @@
     "course": "senior",
     "gender": "M",
     "ageGroup": "60대",
-    "grade": 3,
-    "totalSec": 561,
+    "grade": 2,
+    "totalSec": 518,
     "splits": [
-      134,
-      73,
+      109,
+      67,
       111,
-      100,
-      101,
-      42
+      92,
+      102,
+      37
     ]
   },
   {
     "eventId": "pilot",
     "bib": "S028",
-    "maskedName": "윤*숙",
+    "maskedName": "윤*아",
     "course": "senior",
     "gender": "F",
     "ageGroup": "70대",
-    "grade": 4,
-    "totalSec": 623,
+    "grade": 2,
+    "totalSec": 532,
     "splits": [
-      128,
-      81,
-      124,
-      112,
-      124,
-      54
+      118,
+      59,
+      114,
+      94,
+      105,
+      42
     ],
-    "improvementSec": 30
+    "improvementSec": 67
   },
   {
     "eventId": "pilot",
     "bib": "S029",
-    "maskedName": "장*우",
+    "maskedName": "장*준",
     "course": "senior",
     "gender": "M",
     "ageGroup": "60대",
-    "grade": 5,
-    "totalSec": 655,
+    "grade": 3,
+    "totalSec": 570,
     "splits": [
-      144,
+      119,
       70,
-      133,
-      122,
-      137,
+      104,
+      107,
+      121,
       49
     ],
-    "improvementSec": 60
+    "improvementSec": 72
   },
   {
     "eventId": "pilot",
     "bib": "S030",
-    "maskedName": "임*연",
+    "maskedName": "임*은",
     "course": "senior",
     "gender": "F",
     "ageGroup": "60대",
-    "grade": 6,
-    "totalSec": 696,
+    "grade": 3,
+    "totalSec": 599,
     "splits": [
-      166,
-      84,
-      130,
+      136,
+      78,
       120,
-      144,
-      52
+      100,
+      115,
+      50
     ]
   },
   {
     "eventId": "pilot",
     "bib": "S031",
-    "maskedName": "한*훈",
+    "maskedName": "한*호",
     "course": "senior",
     "gender": "M",
     "ageGroup": "70대",
-    "grade": 1,
-    "totalSec": 507,
+    "grade": 4,
+    "totalSec": 616,
     "splits": [
-      104,
-      61,
-      99,
-      99,
-      105,
-      39
+      139,
+      68,
+      121,
+      107,
+      131,
+      50
     ],
-    "improvementSec": 56
+    "improvementSec": 65
   },
   {
     "eventId": "pilot",
     "bib": "S032",
-    "maskedName": "오*진",
+    "maskedName": "박*숙",
     "course": "senior",
     "gender": "F",
     "ageGroup": "60대",
-    "grade": 2,
-    "totalSec": 529,
+    "grade": 4,
+    "totalSec": 611,
     "splits": [
-      121,
-      57,
-      100,
-      96,
-      112,
-      43
+      124,
+      80,
+      115,
+      109,
+      129,
+      54
     ],
-    "improvementSec": 12
+    "improvementSec": 66
   },
   {
     "eventId": "pilot",
     "bib": "S033",
-    "maskedName": "서*수",
+    "maskedName": "서*석",
     "course": "senior",
     "gender": "M",
     "ageGroup": "60대",
-    "grade": 3,
-    "totalSec": 586,
+    "grade": 5,
+    "totalSec": 629,
     "splits": [
+      126,
+      75,
       136,
-      69,
-      114,
-      104,
-      118,
-      45
+      115,
+      126,
+      51
     ]
   },
   {
     "eventId": "pilot",
     "bib": "S034",
-    "maskedName": "신*진",
+    "maskedName": "신*희",
     "course": "senior",
     "gender": "F",
     "ageGroup": "70대",
-    "grade": 4,
-    "totalSec": 563,
+    "grade": 5,
+    "totalSec": 615,
     "splits": [
+      128,
+      70,
       129,
-      72,
-      113,
-      95,
-      107,
-      47
+      118,
+      124,
+      46
     ],
-    "improvementSec": 36
+    "improvementSec": 47
   },
   {
     "eventId": "pilot",
     "bib": "S035",
-    "maskedName": "권*훈",
+    "maskedName": "권*우",
     "course": "senior",
     "gender": "M",
     "ageGroup": "60대",
-    "grade": 5,
-    "totalSec": 628,
+    "grade": 6,
+    "totalSec": 651,
     "splits": [
-      138,
-      71,
-      121,
-      112,
-      138,
-      48
+      144,
+      78,
+      134,
+      113,
+      129,
+      53
     ],
-    "improvementSec": 49
+    "improvementSec": 31
   },
   {
     "eventId": "pilot",
@@ -661,89 +661,89 @@
     "gender": "F",
     "ageGroup": "60대",
     "grade": 6,
-    "totalSec": 671,
+    "totalSec": 680,
     "splits": [
-      139,
-      80,
-      125,
+      154,
+      83,
+      131,
+      124,
       129,
-      141,
-      57
+      59
     ]
   },
   {
     "eventId": "pilot",
     "bib": "S037",
-    "maskedName": "안*민",
+    "maskedName": "안*준",
     "course": "senior",
     "gender": "M",
     "ageGroup": "70대",
     "grade": 1,
-    "totalSec": 464,
+    "totalSec": 523,
     "splits": [
-      106,
-      58,
-      89,
-      80,
-      95,
-      36
+      125,
+      60,
+      105,
+      96,
+      98,
+      39
     ],
-    "improvementSec": 21
+    "improvementSec": 18
   },
   {
     "eventId": "pilot",
     "bib": "S038",
-    "maskedName": "송*연",
+    "maskedName": "송*희",
     "course": "senior",
     "gender": "F",
     "ageGroup": "60대",
-    "grade": 2,
-    "totalSec": 525,
+    "grade": 1,
+    "totalSec": 485,
     "splits": [
-      113,
+      103,
       59,
-      105,
-      106,
-      97,
-      45
+      96,
+      84,
+      99,
+      44
     ],
     "improvementSec": 62
   },
   {
     "eventId": "pilot",
     "bib": "S039",
-    "maskedName": "류*민",
+    "maskedName": "류*현",
     "course": "senior",
     "gender": "M",
     "ageGroup": "60대",
-    "grade": 3,
+    "grade": 2,
     "totalSec": 570,
     "splits": [
-      117,
-      72,
-      121,
-      103,
-      112,
+      128,
+      63,
+      106,
+      108,
+      120,
       45
     ]
   },
   {
     "eventId": "pilot",
     "bib": "S040",
-    "maskedName": "홍*진",
+    "maskedName": "홍*희",
     "course": "senior",
     "gender": "F",
     "ageGroup": "70대",
-    "grade": 4,
-    "totalSec": 599,
+    "grade": 2,
+    "totalSec": 556,
     "splits": [
-      139,
-      71,
+      116,
+      60,
       119,
-      115,
-      105,
-      50
+      101,
+      112,
+      48
     ],
-    "improvementSec": 20
+    "improvementSec": 72
   }
 ]

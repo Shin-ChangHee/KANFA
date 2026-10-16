@@ -10,6 +10,7 @@ import type { Application, KanfaEvent } from "@/lib/types";
 import { DIVISION_LABEL } from "../apply/schema";
 import { buttonClass } from "../ButtonLink";
 import LaneBadge from "../LaneBadge";
+import RaceReport from "./RaceReport";
 
 export default function ApplicationDetail({ app, event }: { app: Application; event: KanfaEvent }) {
   const [confirming, setConfirming] = useState(false);
@@ -30,7 +31,7 @@ export default function ApplicationDetail({ app, event }: { app: Application; ev
     <article aria-labelledby="detail-title" className="space-y-8">
       <div className="rounded-2xl border-2 border-track bg-white p-6 md:p-8">
         <p className={`inline-flex rounded-full px-3 py-0.5 text-sm font-bold ${cancelled ? "bg-mist text-ink" : "bg-field-soft text-field-ink"}`}>
-          {cancelled ? "취소됨" : finished ? "참가 완료" : "신청 완료"}
+          {cancelled ? "취소됨" : finished ? "완주" : "신청 완료"}
         </p>
         <h2 id="detail-title" className="mt-3 text-2xl font-extrabold">
           {event.name}
@@ -51,7 +52,7 @@ export default function ApplicationDetail({ app, event }: { app: Application; ev
           {cancelled ? (
             "취소한 신청이라 출발조가 배정되지 않아요."
           ) : finished ? (
-            "경기 기록은 기록·순위에서 볼 수 있어요."
+            "대회가 끝났어요. 아래에서 내 기록과 리포트를 확인하세요."
           ) : (
             <>
               <strong>대회 7일 전({formatShortDate(deadline)}) 배정 예정</strong>
@@ -62,6 +63,17 @@ export default function ApplicationDetail({ app, event }: { app: Application; ev
           )}
         </p>
       </section>
+
+      {finished && !cancelled && (
+        <section aria-labelledby="report-title" className="space-y-6">
+          <h3 id="report-title" className="text-2xl font-extrabold">
+            내 기록과 체력 분석
+          </h3>
+          {app.participants.map((p) => (
+            <RaceReport key={p.phone} participant={p} />
+          ))}
+        </section>
+      )}
 
       <section aria-labelledby="people-title">
         <h3 id="people-title" className="text-xl font-extrabold">

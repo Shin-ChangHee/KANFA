@@ -1,0 +1,52 @@
+[
+  {
+    "id": "KANFA-2027-0901",
+    "eventId": "pilot",
+    "division": "solo",
+    "participants": [
+      {
+        "name": "김민수",
+        "birth": "1992-08-15",
+        "gender": "M",
+        "phone": "01012340901",
+        "emergencyPhone": "01099990000",
+        "shirtSize": "L",
+        "grade": 4,
+        "gradeMeasuredAt": "2026-12-10T10:00:00+09:00",
+        "onsiteMeasure": false,
+        "course": "adult",
+        "bib": "A007"
+      }
+    ],
+    "preferredSlot": "pm",
+    "consents": { "privacy": true, "sensitive": true, "gradeLookup": true, "safety": true, "marketing": true },
+    "amount": 50000,
+    "status": "paid",
+    "createdAt": "2027-02-03T11:20:00+09:00"
+  },
+  {
+    "id": "KANFA-2027-0902",
+    "eventId": "pilot",
+    "division": "solo",
+    "participants": [
+      {
+        "name": "박영숙",
+        "birth": "1959-04-02",
+        "gender": "F",
+        "phone": "01055550902",
+        "emergencyPhone": "01077770000",
+        "shirtSize": "M",
+        "grade": 4,
+        "gradeMeasuredAt": "2027-01-15T10:00:00+09:00",
+        "onsiteMeasure": false,
+        "course": "senior",
+        "bib": "S032"
+      }
+    ],
+    "preferredSlot": "am",
+    "consents": { "privacy": true, "sensitive": true, "gradeLookup": true, "safety": true, "marketing": false },
+    "amount": 30000,
+    "status": "paid",
+    "createdAt": "2027-02-05T09:40:00+09:00"
+  }
+]

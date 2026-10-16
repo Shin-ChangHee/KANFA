@@ -1,11 +1,12 @@
 // 목업 데이터 읽기. 화면은 JSON을 직접 import하지 않고 이 파일을 거친다.
 import coursesJson from "@/data/courses.json";
+import demoApplicationsJson from "@/data/demoApplications.json";
 import eventsJson from "@/data/events.json";
 import faqJson from "@/data/faq.json";
 import noticesJson from "@/data/notices.json";
 import placesJson from "@/data/places.json";
 import resultsJson from "@/data/results.json";
-import type { Course, CourseType, FaqItem, KanfaEvent, Notice, Place, Result } from "./types";
+import type { Application, Course, CourseType, FaqItem, KanfaEvent, Notice, Place, Result } from "./types";
 
 export const courses = coursesJson as Course[];
 export const events = eventsJson as KanfaEvent[];
@@ -13,6 +14,8 @@ export const faqs = faqJson as FaqItem[];
 export const notices = noticesJson as Notice[];
 export const places = placesJson as Place[];
 export const results = resultsJson as Result[];
+/** 시연용: 이미 끝난 시범 대회에 참가한 신청 내역 (신청 조회에서 리포트를 보여주기 위함) */
+export const demoApplications = demoApplicationsJson as Application[];
 
 export function getCourse(type: CourseType): Course {
   return courses.find((c) => c.type === type)!;

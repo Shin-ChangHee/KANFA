@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { type FormEvent, useId, useRef, useState } from "react";
 import { useApplications, useHydrated } from "@/lib/useApplications";
-import { getEvent } from "@/lib/data";
+import { demoApplications, getEvent } from "@/lib/data";
 import { formatShortDate } from "@/lib/format";
 import { buttonClass } from "../ButtonLink";
 import { ErrorText, inputClass } from "../form/Fields";
@@ -24,7 +24,9 @@ export default function MyLookup() {
   const resultRef = useRef<HTMLDivElement>(null);
   const ids = { appId: useId(), last4: useId() };
 
-  const found = foundId ? apps.find((a) => a.id === foundId) : undefined;
+  // 시연용 종료 대회 신청 내역도 함께 조회한다.
+  const all = [...demoApplications, ...apps];
+  const found = foundId ? all.find((a) => a.id === foundId) : undefined;
   const event = found ? getEvent(found.eventId) : undefined;
 
   const submit = (e: FormEvent) => {
@@ -34,7 +36,7 @@ export default function MyLookup() {
     if (!ID_RE.test(id)) next.appId = "접수번호는 KANFA-2027-0001 형식으로 입력해 주세요.";
     if (!/^\d{4}$/.test(last4)) next.last4 = "휴대폰 번호 뒤 4자리를 숫자로 입력해 주세요.";
     if (!next.appId && !next.last4) {
-      const app = apps.find((a) => a.id === id && a.participants.some((p) => p.phone.endsWith(last4)));
+      const app = all.find((a) => a.id === id && a.participants.some((p) => p.phone.endsWith(last4)));
       if (!app) next.notFound = "일치하는 신청 내역이 없어요. 접수번호와 휴대폰 번호 뒤 4자리를 다시 확인해 주세요. 이 시안은 신청한 브라우저에서만 조회돼요.";
       else {
         setFoundId(app.id);
@@ -103,6 +105,26 @@ export default function MyLookup() {
       <div ref={resultRef} tabIndex={-1} className="focus:outline-none">
         {found && event && <ApplicationDetail app={found} event={event} />}
       </div>
+
+      {!found && (
+        <aside aria-labelledby="demo-title" className="rounded-xl border border-dashed border-slate/40 bg-white p-5">
+          <h2 id="demo-title" className="font-extrabold">
+            시연 안내: 끝난 대회 기록 보기
+          </h2>
+          <p className="mt-1 text-slate">KANFA 시범 대회에 참가한 시연용 신청 내역으로 내 기록과 체력 분석 리포트를 볼 수 있어요.</p>
+          <ul className="mt-2 space-y-1">
+            {demoApplications.map((a) => (
+              <li key={a.id}>
+                <span className="font-num text-lg font-bold">{a.id}</span> · 뒤 4자리 <span className="font-num text-lg font-bold">{a.participants[0].phone.slice(-4)}</span>
+                <span className="text-slate">
+                  {" "}
+                  ({a.participants[0].name}, {a.participants[0].course === "senior" ? "어르신 코스" : "성인 코스"})
+                </span>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
 
       {mine.length > 0 && !found && (
         <section aria-labelledby="mine-title">
