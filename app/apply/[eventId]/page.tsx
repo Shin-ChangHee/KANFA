@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Placeholder from "@/components/Placeholder";
+import ApplyWizard from "@/components/apply/ApplyWizard";
 import { events, getEvent } from "@/lib/data";
+import { formatDate } from "@/lib/format";
 
 export const dynamicParams = false;
 
@@ -16,23 +17,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: event ? `참가 신청 - ${event.name}` : "참가 신청" };
 }
 
-export default async function Page({ params }: Props) {
+export default async function ApplyPage({ params }: Props) {
   const event = getEvent((await params).eventId);
   if (!event) notFound();
 
   return (
-    <Placeholder
-      title="참가 신청"
-      lead={event.name}
-      plan={[
-        "1. 부문 선택",
-        "2. 참가자 정보",
-        "3. 국민체력100 등급 확인",
-        "4. 건강 문진",
-        "5. 출발 희망 시간대",
-        "6. 동의",
-        "7. 결제(시연)",
-      ]}
-    />
+    <>
+      <div className="border-b border-mist bg-white">
+        <div className="container-page py-8">
+          <p className="font-semibold text-track">참가 신청</p>
+          <h1 className="mt-1 text-[1.75rem] font-extrabold md:text-[2.25rem]">{event.name}</h1>
+          <p className="mt-1 text-slate">
+            {formatDate(event.date)} · {event.venue}
+          </p>
+        </div>
+      </div>
+      <div className="container-page max-w-4xl py-8">
+        <ApplyWizard event={event} />
+      </div>
+    </>
   );
 }

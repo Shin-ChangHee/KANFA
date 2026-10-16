@@ -17,6 +17,12 @@ function kstParts(input: string | Date) {
   };
 }
 
+/** 한국 시간 기준 연·월·일 */
+export function kstYmd(input: string | Date) {
+  const p = kstParts(input);
+  return { year: p.year, month: p.month, day: p.day };
+}
+
 /** 2027년 5월 15일(토) */
 export function formatDate(input: string | Date): string {
   const p = kstParts(input);
@@ -62,6 +68,13 @@ export function maskName(name: string): string {
   if (chars.length <= 1) return name;
   if (chars.length === 2) return `${chars[0]}*`;
   return chars[0] + "*".repeat(chars.length - 2) + chars[chars.length - 1];
+}
+
+/** 01012345678 → 010-****-5678 */
+export function maskPhone(phone: string): string {
+  const d = phone.replace(/\D/g, "");
+  if (d.length < 8) return phone;
+  return `${d.slice(0, 3)}-****-${d.slice(-4)}`;
 }
 
 /** 01012345678 → 010-1234-5678 */

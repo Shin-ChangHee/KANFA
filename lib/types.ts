@@ -73,6 +73,7 @@ export interface Application {
   amount: number;
   status: "paid" | "cancelled";
   createdAt: string;
+  cancelledAt?: string;
 }
 
 export interface Result {
