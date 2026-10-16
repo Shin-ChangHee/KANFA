@@ -1,0 +1,14 @@
+[
+  { "id": "c-seoul-songpa", "name": "서울 송파 체력인증센터", "kind": "center", "region": "서울", "address": "서울특별시 송파구 올림픽로 424 (예시 주소)" },
+  { "id": "c-seoul-nowon", "name": "서울 노원 체력인증센터", "kind": "center", "region": "서울", "address": "서울특별시 노원구 동일로 1400 (예시 주소)" },
+  { "id": "c-gyeonggi-gwangmyeong", "name": "경기 광명 체력인증센터", "kind": "center", "region": "경기", "address": "경기도 광명시 광명로 721 (예시 주소)" },
+  { "id": "c-gyeonggi-suwon", "name": "경기 수원 체력인증센터", "kind": "center", "region": "경기", "address": "경기도 수원시 팔달구 효원로 300 (예시 주소)" },
+  { "id": "c-incheon", "name": "인천 남동 체력인증센터", "kind": "center", "region": "인천", "address": "인천광역시 남동구 구월로 120 (예시 주소)" },
+  { "id": "c-daejeon", "name": "대전 중구 체력인증센터", "kind": "center", "region": "대전", "address": "대전광역시 중구 대종로 373 (예시 주소)" },
+  { "id": "c-busan", "name": "부산 연제 체력인증센터", "kind": "center", "region": "부산", "address": "부산광역시 연제구 월드컵대로 344 (예시 주소)" },
+  { "id": "c-gwangju", "name": "광주 서구 체력인증센터", "kind": "center", "region": "광주", "address": "광주광역시 서구 금화로 240 (예시 주소)" },
+  { "id": "p-seoul-gangnam", "name": "강남 바른몸 피트니스", "kind": "partner", "region": "서울", "address": "서울특별시 강남구 테헤란로 100 (예시 주소)" },
+  { "id": "p-gyeonggi-bundang", "name": "분당 튼튼 트레이닝센터", "kind": "partner", "region": "경기", "address": "경기도 성남시 분당구 황새울로 200 (예시 주소)" },
+  { "id": "p-daejeon", "name": "대전 한밭 체력교실", "kind": "partner", "region": "대전", "address": "대전광역시 서구 둔산로 150 (예시 주소)" },
+  { "id": "p-busan", "name": "부산 해운대 무브짐", "kind": "partner", "region": "부산", "address": "부산광역시 해운대구 센텀중앙로 90 (예시 주소)" }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "season1-opening",
+    "name": "KANFA 시즌 1 개막전",
+    "date": "2027-05-15T09:00:00+09:00",
+    "venue": "서울 올림픽공원 핸드볼경기장",
+    "region": "서울",
+    "applyStart": "2027-04-01T10:00:00+09:00",
+    "applyEnd": "2027-05-02T18:00:00+09:00",
+    "capacity": 720,
+    "applied": 583,
+    "status": "open",
+    "divisions": [
+      { "type": "solo", "course": "adult", "name": "개인(성인 코스)", "fee": 50000, "teamSize": 1 },
+      { "type": "solo", "course": "senior", "name": "개인(어르신 코스)", "fee": 30000, "teamSize": 1 },
+      { "type": "pair", "name": "2인(가족·동료)", "fee": 90000, "teamSize": 2 },
+      { "type": "relay4", "name": "4인 릴레이(기업·동호회)", "fee": 180000, "teamSize": 4 }
+    ],
+    "heatsPreview": [
+      { "time": "09:00", "label": "어르신 코스 · 남성 · 1~3등급" },
+      { "time": "09:10", "label": "어르신 코스 · 여성 · 1~3등급" },
+      { "time": "09:20", "label": "어르신 코스 · 남녀 · 4~6등급" },
+      { "time": "09:40", "label": "성인 코스 · 20대 남성 · 1~2등급" },
+      { "time": "09:50", "label": "성인 코스 · 20대 여성 · 1~2등급" },
+      { "time": "10:00", "label": "성인 코스 · 30대 남성 · 3~4등급" },
+      { "time": "13:00", "label": "성인 코스 · 40대 여성 · 3~4등급" },
+      { "time": "13:10", "label": "성인 코스 · 50대 남성 · 5~6등급" },
+      { "time": "13:20", "label": "성인 코스 · 30대 여성 · 5~6등급" },
+      { "time": "14:00", "label": "2인 부문" },
+      { "time": "15:00", "label": "4인 릴레이 부문" }
+    ]
+  },
+  {
+    "id": "season1-round2",
+    "name": "KANFA 시즌 1 2차전",
+    "date": "2027-07-10T09:00:00+09:00",
+    "venue": "경기 광명스피돔",
+    "region": "경기",
+    "applyStart": "2027-06-01T10:00:00+09:00",
+    "applyEnd": "2027-06-27T18:00:00+09:00",
+    "capacity": 900,
+    "applied": 0,
+    "status": "upcoming",
+    "divisions": [
+      { "type": "solo", "course": "adult", "name": "개인(성인 코스)", "fee": 50000, "teamSize": 1 },
+      { "type": "solo", "course": "senior", "name": "개인(어르신 코스)", "fee": 30000, "teamSize": 1 },
+      { "type": "pair", "name": "2인(가족·동료)", "fee": 90000, "teamSize": 2 },
+      { "type": "relay4", "name": "4인 릴레이(기업·동호회)", "fee": 180000, "teamSize": 4 }
+    ],
+    "heatsPreview": [
+      { "time": "09:00", "label": "어르신 코스 · 남녀 · 1~3등급" },
+      { "time": "09:10", "label": "어르신 코스 · 남녀 · 4~6등급" },
+      { "time": "09:30", "label": "성인 코스 · 20대 남성 · 1~2등급" },
+      { "time": "09:40", "label": "성인 코스 · 30대 여성 · 3~4등급" },
+      { "time": "13:00", "label": "성인 코스 · 40대 남성 · 3~4등급" },
+      { "time": "13:10", "label": "성인 코스 · 50대 여성 · 5~6등급" },
+      { "time": "14:00", "label": "2인 부문" },
+      { "time": "15:00", "label": "4인 릴레이 부문" }
+    ]
+  },
+  {
+    "id": "pilot",
+    "name": "KANFA 시범 대회",
+    "date": "2027-03-13T09:00:00+09:00",
+    "venue": "대전 한밭체육관",
+    "region": "대전",
+    "applyStart": "2027-02-01T10:00:00+09:00",
+    "applyEnd": "2027-02-28T18:00:00+09:00",
+    "capacity": 300,
+    "applied": 300,
+    "status": "finished",
+    "divisions": [
+      { "type": "solo", "course": "adult", "name": "개인(성인 코스)", "fee": 50000, "teamSize": 1 },
+      { "type": "solo", "course": "senior", "name": "개인(어르신 코스)", "fee": 30000, "teamSize": 1 }
+    ],
+    "heatsPreview": [
+      { "time": "09:00", "label": "어르신 코스 · 남녀 · 1~6등급" },
+      { "time": "09:30", "label": "성인 코스 · 남성 · 1~3등급" },
+      { "time": "09:40", "label": "성인 코스 · 여성 · 1~3등급" },
+      { "time": "13:00", "label": "성인 코스 · 남성 · 4~6등급" },
+      { "time": "13:10", "label": "성인 코스 · 여성 · 4~6등급" }
+    ]
+  }
+]
