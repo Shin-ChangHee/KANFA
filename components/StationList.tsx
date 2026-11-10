@@ -1,5 +1,6 @@
+import Image from "next/image";
+import { stationImage } from "@/lib/stationImages";
 import type { Course } from "@/lib/types";
-import StationIllustration from "./StationIllustration";
 
 /** 코스 안내의 6개 구간 상세 */
 export default function StationList({ course }: { course: Course }) {
@@ -7,9 +8,20 @@ export default function StationList({ course }: { course: Course }) {
     <ol className="space-y-6">
       {course.stations.map((s) => {
         const finish = s.order === course.stations.length;
+        const img = stationImage(s.sourceTest);
         return (
-          <li key={s.order} className="grid gap-5 rounded-xl border border-mist bg-white p-5 md:grid-cols-[1fr_15rem] md:p-6">
-            <div>
+          <li key={s.order} className="overflow-hidden rounded-2xl border border-mist bg-white">
+            {img && (
+              <div className="flex justify-center bg-track-soft md:p-5">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  sizes="(min-width: 1152px) 1100px, 100vw"
+                  className="h-auto max-h-80 w-auto max-w-full md:rounded-xl"
+                />
+              </div>
+            )}
+            <div className="p-5 md:p-7">
               <p className="flex flex-wrap items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-amber font-num text-2xl font-bold text-ink">{s.order}</span>
                 <span className="text-sm font-semibold text-slate">
@@ -28,9 +40,6 @@ export default function StationList({ course }: { course: Course }) {
                 <span className="font-bold text-field-ink">도움말 </span>
                 {s.tip}
               </p>
-            </div>
-            <div className="md:pt-2">
-              <StationIllustration order={s.order} name={s.sourceTest} />
             </div>
           </li>
         );
