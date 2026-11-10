@@ -13,12 +13,10 @@ export default function StationList({ course }: { course: Course }) {
           <li key={s.order} className="overflow-hidden rounded-2xl border border-mist bg-white">
             {img && (
               <div className="flex justify-center bg-track-soft md:p-5">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  sizes="(min-width: 1152px) 1100px, 100vw"
-                  className="h-auto max-h-80 w-auto max-w-full md:rounded-xl"
-                />
+                {/* 높이가 20rem을, 폭이 원본 크기를 넘지 않도록 폭을 정한다. 폭이 정해져 있어 불러오기 전에도 자리가 잡힌다. */}
+                <div className="w-full" style={{ maxWidth: `min(${img.src.width}px, calc(20rem * ${img.src.width} / ${img.src.height}))` }}>
+                  <Image src={img.src} alt={img.alt} loading="eager" className="h-auto w-full md:rounded-xl" />
+                </div>
               </div>
             )}
             <div className="p-5 md:p-7">

@@ -14,11 +14,14 @@ export default function CourseTabList({
   value,
   onChange,
   label,
+  perTabPanels = false,
 }: {
   idPrefix: string;
   value: CourseType;
   onChange: (v: CourseType) => void;
   label: string;
+  /** 탭마다 패널이 따로 있으면 true (패널 id: `{idPrefix}-panel-{type}`) */
+  perTabPanels?: boolean;
 }) {
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -48,7 +51,7 @@ export default function CourseTabList({
             role="tab"
             id={`${idPrefix}-tab-${t.type}`}
             aria-selected={selected}
-            aria-controls={`${idPrefix}-panel`}
+            aria-controls={perTabPanels ? `${idPrefix}-panel-${t.type}` : `${idPrefix}-panel`}
             tabIndex={selected ? 0 : -1}
             onClick={() => onChange(t.type)}
             onKeyDown={(e) => onKeyDown(e, i)}
