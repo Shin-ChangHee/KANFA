@@ -8,7 +8,7 @@ export default function StationList({ course }: { course: Course }) {
     <ol className="space-y-6">
       {course.stations.map((s) => {
         const finish = s.order === course.stations.length;
-        const img = stationImage(s.sourceTest);
+        const img = stationImage(course.type, s.sourceTest);
         return (
           <li key={s.order} className="overflow-hidden rounded-2xl border border-mist bg-white">
             {img && (
